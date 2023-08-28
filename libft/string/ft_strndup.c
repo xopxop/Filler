@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player.h                                           :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dthan <dthan@student.hive.fi>              +#+  +:+       +#+        */
+/*   By: dthan <dthan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 13:59:08 by dthan             #+#    #+#             */
-/*   Updated: 2023/08/25 18:24:34 by dthan            ###   ########.fr       */
+/*   Created: 2020/04/06 00:18:18 by dthan             #+#    #+#             */
+/*   Updated: 2020/07/08 20:49:31 by dthan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PLAYER_H
-# define PLAYER_H
-# define PLAYER_ONE 'x'
-# define PLAYER_TWO 'o'
+#include "../includes/ft_string.h"
 
-typedef struct s_player
+char	*ft_strndup(char *str, size_t len)
 {
-	char character;
-}	t_player;
+	char	*new;
+	int		i;
 
-#endif
+	new = ft_strnew(len);
+	i = 0;
+	while (len > 0)
+	{
+		new[i] = str[i];
+		len--;
+		i++;
+	}
+	return (new);
+}

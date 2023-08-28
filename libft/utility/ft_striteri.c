@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player.h                                           :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dthan <dthan@student.hive.fi>              +#+  +:+       +#+        */
+/*   By: dthan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 13:59:08 by dthan             #+#    #+#             */
-/*   Updated: 2023/08/25 18:24:34 by dthan            ###   ########.fr       */
+/*   Created: 2019/10/22 15:05:10 by dthan             #+#    #+#             */
+/*   Updated: 2019/10/23 13:54:25 by dthan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PLAYER_H
-# define PLAYER_H
-# define PLAYER_ONE 'x'
-# define PLAYER_TWO 'o'
-
-typedef struct s_player
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	char character;
-}	t_player;
+	unsigned int	i;
 
-#endif
+	if (!s || !(*s) || !f)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		++i;
+	}
+}

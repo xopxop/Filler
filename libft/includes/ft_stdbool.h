@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player.h                                           :+:      :+:    :+:   */
+/*   ft_stdbool.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dthan <dthan@student.hive.fi>              +#+  +:+       +#+        */
+/*   By: dthan <dthan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 13:59:08 by dthan             #+#    #+#             */
-/*   Updated: 2023/08/25 18:24:34 by dthan            ###   ########.fr       */
+/*   Created: 2020/08/10 14:38:27 by dthan             #+#    #+#             */
+/*   Updated: 2020/08/10 14:48:13 by dthan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PLAYER_H
-# define PLAYER_H
-# define PLAYER_ONE 'x'
-# define PLAYER_TWO 'o'
+#ifndef FT_STDBOOL_H
+# define FT_STDBOOL_H
 
-typedef struct s_player
+typedef enum e_bool
 {
-	char character;
-}	t_player;
+	false = 0,
+	true = 1
+}	t_bool;
 
 #endif

@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player.h                                           :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dthan <dthan@student.hive.fi>              +#+  +:+       +#+        */
+/*   By: dthan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 13:59:08 by dthan             #+#    #+#             */
-/*   Updated: 2023/08/25 18:24:34 by dthan            ###   ########.fr       */
+/*   Created: 2019/10/19 15:01:52 by dthan             #+#    #+#             */
+/*   Updated: 2019/10/26 04:31:34 by dthan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PLAYER_H
-# define PLAYER_H
-# define PLAYER_ONE 'x'
-# define PLAYER_TWO 'o'
+#include "../includes/ft_string.h"
 
-typedef struct s_player
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char character;
-}	t_player;
+	unsigned char		*ptr;
+	const unsigned char	*ptr2;
 
-#endif
+	ptr = (unsigned char *)dst;
+	ptr2 = (unsigned char *)src;
+	while (n--)
+		*ptr++ = *ptr2++;
+	return (dst);
+}

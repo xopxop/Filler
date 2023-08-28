@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player.h                                           :+:      :+:    :+:   */
+/*   ft_ctype.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dthan <dthan@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 13:59:08 by dthan             #+#    #+#             */
-/*   Updated: 2023/08/25 18:24:34 by dthan            ###   ########.fr       */
+/*   Created: 2020/02/21 06:48:00 by dthan             #+#    #+#             */
+/*   Updated: 2020/02/21 06:48:01 by dthan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PLAYER_H
-# define PLAYER_H
-# define PLAYER_ONE 'x'
-# define PLAYER_TWO 'o'
+#ifndef FT_CTYPE_H
+# define FT_CTYPE_H
+# include "libft.h"
 
-typedef struct s_player
-{
-	char character;
-}	t_player;
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isprint(int c);
+int	ft_isascii(int c);
+int	ft_toupper(int c);
+int	ft_tolower(int c);
+int	ft_isspace(int c);
+int	ft_islower(int c);
+int	ft_isupper(int c);
 
 #endif

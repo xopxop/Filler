@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player.h                                           :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dthan <dthan@student.hive.fi>              +#+  +:+       +#+        */
+/*   By: dthan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 13:59:08 by dthan             #+#    #+#             */
-/*   Updated: 2023/08/25 18:24:34 by dthan            ###   ########.fr       */
+/*   Created: 2019/10/22 13:09:21 by dthan             #+#    #+#             */
+/*   Updated: 2019/10/22 13:09:25 by dthan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PLAYER_H
-# define PLAYER_H
-# define PLAYER_ONE 'x'
-# define PLAYER_TWO 'o'
-
-typedef struct s_player
+char	*ft_strrchr(const char *s, int c)
 {
-	char character;
-}	t_player;
+	char	*last_c;
 
-#endif
+	last_c = (0);
+	while (*s)
+	{
+		if (*s == c)
+			last_c = (char *)s;
+		s++;
+	}
+	if (last_c)
+		return (last_c);
+	if (c == '\0')
+		return ((char *)s);
+	return (0);
+}

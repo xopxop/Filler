@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player.h                                           :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dthan <dthan@student.hive.fi>              +#+  +:+       +#+        */
+/*   By: dthan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 13:59:08 by dthan             #+#    #+#             */
-/*   Updated: 2023/08/25 18:24:34 by dthan            ###   ########.fr       */
+/*   Created: 2019/10/17 16:26:05 by dthan             #+#    #+#             */
+/*   Updated: 2019/10/17 17:38:28 by dthan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PLAYER_H
-# define PLAYER_H
-# define PLAYER_ONE 'x'
-# define PLAYER_TWO 'o'
+#include "../includes/ft_string.h"
 
-typedef struct s_player
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	char character;
-}	t_player;
+	size_t	ct;
 
-#endif
+	ct = 0;
+	while ((src[ct]) && (ct < len))
+	{
+		dst[ct] = src[ct];
+		ct++;
+	}
+	while (ct < len)
+	{
+		dst[ct] = '\0';
+		ct++;
+	}
+	return (dst);
+}

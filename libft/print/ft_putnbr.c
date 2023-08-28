@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dthan <dthan@student.hive.fi>              +#+  +:+       +#+        */
+/*   By: dthan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 12:10:49 by dthan             #+#    #+#             */
-/*   Updated: 2023/08/25 16:00:34 by dthan            ###   ########.fr       */
+/*   Created: 2019/10/23 16:10:07 by dthan             #+#    #+#             */
+/*   Updated: 2019/10/28 17:54:45 by dthan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main(void)
-{
-	t_board *board = new_board();
-	t_player *player = new_player();
+#include "../includes/ft_print.h"
 
-	while ("playing")
+void	ft_putnbr(int nbr)
+{
+	unsigned int	nb;
+
+	if (nbr < 0)
 	{
-		t_ordinate play = player_play();
-		if (play == NULL)
-			break;
-		delete_ordinate(play);
+		ft_putchar('-');
+		nb = (unsigned int)(nbr * -1);
 	}
-	delete_board(board);
-	delete_player(player);
-	return (0);
+	else
+		nb = (unsigned int)nbr;
+	if (nb >= 10)
+		ft_putnbr(nb / 10);
+	ft_putchar((char)(nb % 10) + '0');
 }

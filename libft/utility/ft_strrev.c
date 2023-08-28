@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player.h                                           :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dthan <dthan@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 13:59:08 by dthan             #+#    #+#             */
-/*   Updated: 2023/08/25 18:24:34 by dthan            ###   ########.fr       */
+/*   Created: 2019/12/31 15:26:45 by dthan             #+#    #+#             */
+/*   Updated: 2020/02/10 09:21:45 by dthan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PLAYER_H
-# define PLAYER_H
-# define PLAYER_ONE 'x'
-# define PLAYER_TWO 'o'
+#include "../includes/ft_utility.h"
 
-typedef struct s_player
+char	*ft_strrev(char *str)
 {
-	char character;
-}	t_player;
+	char	ch;
+	int		i;
+	int		j;
 
-#endif
+	i = (int)ft_strlen(str) - 1;
+	j = 0;
+	while (i > j)
+	{
+		ch = str[i];
+		str[i] = str[j];
+		str[j] = ch;
+		i--;
+		j++;
+	}
+	return (str);
+}
