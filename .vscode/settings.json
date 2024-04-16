@@ -1,0 +1,16 @@
+{
+  "files.associations": {
+    "*.embeddedhtml": "html",
+    "_pid_t.h": "c",
+    "cstdlib": "c",
+    "locale": "c",
+    "ostream": "c",
+    "new": "c",
+    "board.h": "c",
+    "libft.h": "c",
+    "filler.h": "c",
+    "filler_lib.h": "c",
+    "player.h": "c",
+    "stdlib.h": "c"
+  }
+}

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player.c                                           :+:      :+:    :+:   */
+/*   token.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dthan <dthan@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 14:26:24 by dthan             #+#    #+#             */
-/*   Updated: 2023/08/25 15:53:51 by dthan            ###   ########.fr       */
+/*   Created: 2023/08/23 12:45:41 by dthan             #+#    #+#             */
+/*   Updated: 2023/09/01 02:05:27 by dthan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef struct s_ordinate
-{
-	int x;
-	int y;
-}	t_ordinate;
+#ifndef TOKEN_H
+# define TOKEN_H
 
-t_ordinate	*player_turn(t_board *board, t_token *token)
+typedef struct s_token
 {
-	player_generate_heat_map();
-	player_
-}
+	char **map;
+	int width;
+	int height;
+}	t_token;
+
+#endif

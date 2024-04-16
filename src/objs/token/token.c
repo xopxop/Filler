@@ -1,19 +1,19 @@
-#include "board.h"
-#include "stdlib.h"
+#include "token.h"
+#include "unistd.h"
 
-static void destructor(t_board *obj) {
-	int	i = 0;
-
+static void destructor(t_token *obj) {
+	int i = 0;
+	
 	while (obj->map[i]) {
 		free(obj->map[i]);
-		obj->map[i] = NULL;
+		obj->map = NULL;
 		i++;
 	}
 	free(obj->map);
 	obj->map = NULL;
 }
 
-static void constructor(t_board *obj) {
+static void constructor(t_token *obj) {
 	get_dimension(&(obj->height), &(obj->width));
 	obj->map = get_map();
 	if (obj->height != get_height(obj->map)) {
@@ -24,15 +24,17 @@ static void constructor(t_board *obj) {
 	}
 }
 
-void delete_board(t_board *obj) {
+void delete_token(t_token *obj)
+{
 	destructor(obj);
 	free(obj);
 }
 
-t_board *new_board(void) {
-	t_board *obj;
-	
-	obj = (t_board*)malloc(sizeof(t_board));
+t_token *new_token(char **raw_data)
+{
+	t_token *obj;
+
+	obj = (t_token *)malloc(sizeof(t_token));
 	constructor(obj);
-	return obj;
+	return (obj);
 }
