@@ -1,5 +1,5 @@
-#include "token.h"
 #include "unistd.h"
+#include "token.interface.h"
 
 static void destructor(t_token *obj) {
 	int i = 0;

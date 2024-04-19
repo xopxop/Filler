@@ -11,6 +11,7 @@
     "filler.h": "c",
     "filler_lib.h": "c",
     "player.h": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "board.class.h": "c"
   }
 }

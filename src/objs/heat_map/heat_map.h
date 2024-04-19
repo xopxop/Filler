@@ -1,5 +1,5 @@
-#ifndef BOARD_H
-# define BOARD_H
+#ifndef HEAT_MAP_H
+#define HEAT_MAP_H
 
 typedef struct s_heat_map
 {
@@ -8,7 +8,7 @@ typedef struct s_heat_map
 	int	**map;
 }	t_heat_map;
 
-t_heat_map	*new_heat_map(t_board *board);
+t_heat_map	*new_heat_map(char **map, int height, int width, char player_char);
 void	delete_heat_map(t_heat_map *obj);
 
 #endif

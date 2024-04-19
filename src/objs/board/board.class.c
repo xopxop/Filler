@@ -1,5 +1,5 @@
-#include "board.h"
 #include "stdlib.h"
+#include "board.interface.h"
 
 static void destructor(t_board *obj) {
 	int	i = 0;

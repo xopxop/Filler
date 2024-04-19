@@ -1,8 +1,8 @@
-#include "filler.h"
-#include "board.h"
-#include "token.h"
 #include "stdlib.h"
 #include "unistd.h"
+#include "filler.interface.h"
+#include "board.interface.h"
+#include "token.interface.h"
 
 int play(t_filler obj, t_board board, t_token token) {
   return (0);

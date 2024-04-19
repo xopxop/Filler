@@ -1,21 +1,11 @@
-#include "filler.h"
-#include "board.h"
-#include "token.h"
+#include "filler.class.h"
+#include "board.class.h"
+#include "token.class.h"
 
-void print_board(int fd, t_board *board)
-{
-	ft_dprintf(fd, "Dimension - [%d] [%d]\n", board->height, board->width);
-	for (int i = 0; i < board->height; i++)
-		ft_dprintf(fd, "[%s]\n", board->map[i]);
-}
-
-int main(void)
-{
-	// int file = open("log.txt", O_WRONLY | O_CREAT);
+int main(void) {
 	t_filler *filler = new_filler();
 
-	while (is_game_over())
-	{
+	while (is_game_over()) {
 		t_board *board = new_board();
 		t_token *token = new_token();
 		filler->play(*filler, *board, *token);
